@@ -1,50 +1,44 @@
 package models;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 public class Category {
 
-    private String name;
-    private int id;
+    private String category;
+    private int idCategory;
 
+    public Category(String category) {
+        this.category = category;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Category category = (Category) o;
+        Category category1 = (Category) o;
 
-        if (id != category.id) return false;
-        return name.equals(category.name);
+        if (idCategory != category1.idCategory) return false;
+        return category.equals(category1.category);
     }
 
     @Override
     public int hashCode() {
-        int result = name.hashCode();
-        result = 31 * result + id;
+        int result = category.hashCode();
+        result = 31 * result + idCategory;
         return result;
     }
-    //    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        Category category = (Category) o;
-//
-//
-//        return name.equals(category.name);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        int result = name.hashCode();
-//
-//        return result;
-//    }
 
+    public String getCategory() {
+        return category;
+    }
 
+    public int getIdCategory() {
+        return idCategory;
+    }
 
-
-
-
-
+    public void setId(int idCategory) {
+        this.idCategory = idCategory;
+    }
 }
