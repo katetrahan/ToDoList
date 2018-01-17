@@ -13,14 +13,14 @@ public interface CategoryDao {
     List<Category> getAllCats();
     List<Task> getAllTasksByCategory(int categoryId);
 
-//    Category findById(int id);
+    Category findById(int id);
 //
 //    //update
-//    void update(int id, String name);
+  void update(int id, String name);
 //
 //    //delete
-//    void deleteById(int id);
-//    void clearAllCategories();
+  void deleteById(int id);
+   void clearAllCategories();
 
 
 

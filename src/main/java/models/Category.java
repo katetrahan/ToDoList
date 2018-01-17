@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Category {
 
     private String category;
-    private int idCategory;
+    private int id;
 
     public Category(String category) {
         this.category = category;
@@ -19,14 +19,14 @@ public class Category {
 
         Category category1 = (Category) o;
 
-        if (idCategory != category1.idCategory) return false;
+        if (id != category1.id) return false;
         return category.equals(category1.category);
     }
 
     @Override
     public int hashCode() {
         int result = category.hashCode();
-        result = 31 * result + idCategory;
+        result = 31 * result + id;
         return result;
     }
 
@@ -34,11 +34,11 @@ public class Category {
         return category;
     }
 
-    public int getIdCategory() {
-        return idCategory;
+    public int getId() {
+        return id;
     }
 
-    public void setId(int idCategory) {
-        this.idCategory = idCategory;
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -7,7 +7,7 @@ public interface TaskDao {
 
 
     //create
-    void add (Task task);
+     void add(Task task);
     //read
     List<Task> getAll();
 
